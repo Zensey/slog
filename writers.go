@@ -22,7 +22,7 @@ func FileLogger(prefix string) *slog {
 type ConsoleWriter struct{}
 
 func (c *ConsoleWriter) Write(p []byte) (n int, err error) {
-	fmt.Println(string(p))
+	fmt.Print(string(p))
 	return len(p), nil
 }
 
